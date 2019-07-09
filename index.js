@@ -56,6 +56,12 @@ const skills = [
 
 const profs = [
     [1437, 1395],
+    [1475, 1424],
+    [1506, 1395],
+    [1538, 1426],
+    [1536, 1549],
+    [1485, 1550],
+    [1439, 1549],
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
