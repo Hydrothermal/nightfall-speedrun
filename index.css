@@ -3,17 +3,29 @@ body {
     background-color: #000;
 }
 
-.skill-box {
+.click-box {
     position: absolute;
     cursor: pointer;
+    transition: all 0.1s ease;
+    opacity: 0.85;
+    background-color: #e33;
+}
+
+.click-box.skill {
     width: 50px;
     height: 50px;
     margin: 7px;
-    transition: all 0.1s ease;
-    opacity: 0.85;
+    box-shadow: 0px 0px 3px 6px #e33;
 }
 
-.skill-box.active {
-    background-color: #e33;
-    box-shadow: 0px 0px 3px 6px #e33;
+.click-box.prof {
+    width: 34px;
+    height: 34px;
+    margin: 3px;
+    box-shadow: 0px 0px 3px 3px #e33;
+}
+
+.click-box.inactive {
+    background: none;
+    box-shadow: none;
 }

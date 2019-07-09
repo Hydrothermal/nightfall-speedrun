@@ -54,20 +54,28 @@ const skills = [
     [872, 1971],
 ];
 
+const profs = [
+    [1437, 1395],
+];
+
 document.addEventListener("DOMContentLoaded", () => {
     skills.forEach(([x, y]) => {
-        document.body.innerHTML += `<div class="skill-box" style="top: ${y}px; left: ${x}px;"></div>`;
+        document.body.innerHTML += `<div class="click-box inactive skill" style="top: ${y}px; left: ${x}px;"></div>`;
+    });
+
+    profs.forEach(([x, y]) => {
+        document.body.innerHTML += `<div class="click-box inactive prof" style="top: ${y}px; left: ${x}px;"></div>`;
     });
 });
 
 document.addEventListener("click", () => {
     let target = event.target;
 
-    if(target.classList.contains("skill-box")) {
-        if(target.classList.contains("active")) {
-            target.classList.remove("active");
+    if(target.classList.contains("click-box")) {
+        if(target.classList.contains("inactive")) {
+            target.classList.remove("inactive");
         } else {
-            target.classList.add("active");
+            target.classList.add("inactive");
         }
     }
 });
